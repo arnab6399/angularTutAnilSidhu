@@ -1,0 +1,36 @@
+.counter{
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: black;
+  padding: 10px;
+  margin: auto;
+  width: 100px;
+  border-radius: 10px;
+  background: grey;
+}
+.btn{
+  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+  width: 100px;
+  height: 100px;
+}
+
+.bg-red{
+  background-color: red;
+}
+.bg-black{
+  background-color: black;
+}
+.bg-green{
+  background-color: green;
+}
+
+.btn:hover{
+  background-color: olive;
+}

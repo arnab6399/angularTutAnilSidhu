@@ -1,0 +1,17 @@
+.event-mouseover {
+  border: 2px solid #4CAF50;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: red;
+  height:100px;
+  width: 100px;
+}
+
+.event-mouseleave {
+  border: 2px solid #4CAF50;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: blue;
+  height:100px;
+  width: 100px;
+}

@@ -1,0 +1,10 @@
+<p>events component works!</p>
+<button class="btn" name="login" (click)="clickme($event)">Click me</button>
+<div (mouseover)="eventMouseOver($event)" class ="event-mouseover"></div>
+
+<div (mouseleave)="eventMouseLeave($event)" class="event-mouseleave"></div>
+
+<input (focus)="eventFocus($event)" (input)="eventKeyPress($event)" (blur)="eventOnBlur($event)" name="input" type="text" class="input-box" placeholder="Type something..." />
+
+<br/>
+<br/>
