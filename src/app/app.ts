@@ -5,10 +5,12 @@ import { Signup } from './signup/signup';
 import { Profile } from './profile/profile';
 import { Counter } from './counter/counter';
 import { Events } from "./events/events";
+import { Getset } from "./getset/getset";
+import { RulesAndStyles } from "./rules-and-styles/rules-and-styles";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login, Signup, Counter, Events],
+  imports: [RouterOutlet, RulesAndStyles],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
