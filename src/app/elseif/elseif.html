@@ -1,0 +1,10 @@
+<h1>elseif works!</h1>
+<button (click)="changeDivColour('red')">Red</button>
+<button (click)="changeDivColour('green')">Green</button>
+<button (click)="changeDivColour('blue')">Blue </button>
+<button (click)="changeDivColour('other')">Other</button>
+<input type="text" placeholder="Enter any color" (input)="changeDivColourFromInput($event)" />
+@if(divColor=='red'){<div class="divStyle" style="background-color: red;" ></div>}
+@else if(divColor=='green'){<div class="divStyle" style="background-color: green;" ></div>}
+@else if(divColor=='blue'){<div class="divStyle" style="background-color: blue;" ></div>}
+@else{<div class="divStyle" style="background-color: black;" ></div>}

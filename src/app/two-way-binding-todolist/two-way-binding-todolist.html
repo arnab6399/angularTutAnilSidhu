@@ -1,0 +1,10 @@
+<h1>two-way-binding-todolist works!</h1>
+<input type="text" [(ngModel)]="name" placeholder="Enter Name"/>
+<h2>My Name is : {{name}}</h2>
+<input type="text" [(ngModel)]="task" placeholder="Enter a task"/>
+<button (click)="addTask()">Add Task</button>
+<ul>
+  @for(task of taskList; track task; let i=$index)
+  { <li>{{i}} - {{task}} - <button (click)="deleteTask(i)">Delete Task</button></li>}
+
+</ul>

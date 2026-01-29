@@ -1,0 +1,29 @@
+<h1>contextual-var works!</h1>
+<div style="border: 5px solid black; border-radius: 5px; outline-color: black; background-color: lightpink;">
+@for(user of userList; track user; let i = $index; let j= $first; let k= $last)
+{
+  @if(j || k) {
+  <h4 style="color: red; background-color: aqua;">The {{i+1}}th user is : {{user}}</h4>
+    }
+    @else {
+      <h2 >The {{i+1}}th user is : {{user}}</h2>
+    }
+    <h5>{{$count}}</h5>
+}
+@empty {
+  <h3>No Record Found</h3>
+}
+</div>
+<div style="border: 5px solid black; outline-color: black; background-color: lightpink;">
+  @for(user of userList; track user; let i = $index; let j= $first; let k= $last)
+{
+
+    @if($even) {
+  <h4 style="color: red; background-color: rgb(212, 218, 218);">The {{i+1}}th user is : {{user}}</h4>
+    }
+    @if($odd) {
+      <h2 style="background-color: rosybrown;">The {{i+1}}th user is : {{user}}</h2>
+    }
+  }
+</div>
+<!-- <h3>Total user count is {{$count}}</h3> -->

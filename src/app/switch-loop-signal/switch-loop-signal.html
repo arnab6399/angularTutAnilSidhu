@@ -1,0 +1,58 @@
+<h1>switch-loop-signal works!</h1>
+
+<h2>Signal Value: {{signalValue()}}</h2>
+<button (click)="signalIncrement()">Increment Signal</button>
+<button (click)="ChangeColour('Red')">Red</button>
+<button (click)="ChangeColour('Green')">Green</button>
+<button (click)="ChangeColour('Blue')">Blue</button>
+<button (click)="ChangeColour('Yellow')">Yellow</button>
+<button (click)="ChangeColour('Purple')">Purple</button>
+<button (click)="ChangeColour('Black')">Black</button>
+<input type="text" (input)="ShowColour($event)" placeholder="Enter any other colour" #otherColour/>
+<br/>
+<br/>
+@switch (colour.toLowerCase()) {
+  @case('red')
+  {
+    <h1 style="width:200px; height:200px; background-color:red; color:white"> Red Colour</h1>
+  }
+  @case('green')
+  {
+    <h1 style="width:200px; height:200px; background-color:green; color:white"> Green Colour</h1>
+  }
+  @case('blue')
+  {
+    <h1 style="width:200px; height:200px; background-color:blue; color:white"> Blue Colour</h1>
+  }
+  @case('yellow')
+  {
+    <h1 style="width:200px; height:200px; background-color:yellow; color:black"> Yellow Colour</h1>
+  }
+  @case('purple')
+  {
+    <h1 style="width:200px; height:200px; background-color:purple; color:white"> Purple Colour</h1>
+  }
+  @case('black')
+  {
+    <h1 style="width:200px; height:200px; background-color:black; color:white"> Black Colour</h1>
+  }
+  @default
+  {
+    <h1 style="width:200px; height:200px; background-color:grey; color:black"> No Color Match</h1>
+  }
+}
+
+<hr/>
+<br/>
+<h2>Loop Example</h2>
+@for(name of nameList; track name) {
+  <h3>{{name}}</h3>
+}
+
+@for(student of studentList; track student; let id=$index) {
+  <h3>{{id+1}} - {{student.name}} - {{student.age}} - {{student.address}}
+    <button (click)="GetName(student.name)">GetName</button>
+    <button (click)="RemoveName(student.name)">Remove</button>
+  </h3>
+
+}

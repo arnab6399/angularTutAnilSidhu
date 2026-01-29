@@ -1,1 +1,16 @@
 <h1>ifelse works!</h1>
+<button (click)="showDiv()">Show Div</button>
+<button (click)="hideDiv()">Hide Div</button>
+<button (click)="toggleDiv()">Toggle Div</button>
+<br/><br/>
+@if(divValue){
+<div class="divStyle"></div>
+}
+
+<hr/>
+<button (click)="toggleTwo()" > {{divToggle?'Toggle To Green':'Toggle To Blue'}}</button>
+@if(divToggle){
+  <div class="divToggleBlue"></div>
+} @else{
+  <div class="divToggleGreen"></div>
+}
