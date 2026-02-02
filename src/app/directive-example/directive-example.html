@@ -1,0 +1,58 @@
+<p>directive-example works!</p>
+<ul>
+  <li *ngFor="let item of students">
+    {{ item }}
+  </li>
+</ul>
+<ul>
+  <li *ngFor="let student of studentsData">
+    Name: {{ student.name }}, Age: {{ student.age }}, Email: {{ student.email }}
+    <ul>
+      Skill:
+      <li *ngFor="let skill of student.skills">
+         {{ skill }}
+      </li>
+    </ul>
+  </li>
+</ul>
+<div *ngFor="let s of studentsData">
+  <h2>{{ s.name }}</h2>
+  <p>Age: {{ s.age }}</p>
+  <p>Email: {{ s.email }}</p>
+  <h3>Skills:</h3>
+  <div *ngFor="let skill of s.skills" style="margin: 5px;">
+    - {{ skill }}
+  </div>
+
+</div>
+<h1 *ngIf="show">This is visible only when show is true</h1>
+<!-- <button *ngIf="isLogIn">Log Out</button>
+<button *ngIf="!isLogIn">Log In</button> -->
+<a *ngIf="isLogIn; else logInTemplate" href="#" (click)="isLogIn = false">Log Out</a>
+<ng-template #logInTemplate>
+  <a href="#" (click)="isLogIn = true">Log In</a>
+</ng-template>
+<div *ngIf="block ==0">
+  <h1>Heading 0</h1>
+</div>
+<div *ngIf="block ==1">
+  <h1>Heading 1</h1>
+</div>
+<div *ngIf="block ==2">
+  <h1>Heading 2</h1>
+</div>
+<button (click)="updateBlockVal()">Update Block</button>
+<hr/>
+<button (click)="ChangeColor('red')">Red Color Div</button>
+<button (click)="ChangeColor('green')">Green Color Div</button>
+<button (click)="ChangeColor('yellow')">Yellow Color Div</button>
+<button (click)="ChangeColor('blue')">Blue Color Div</button>
+<button (click)="ChangeColor('aqua')">Aqua Color Div</button>
+<div [ngSwitch]="color">
+<h3 *ngSwitchCase="'red'" style="background-color: red;">Red Color</h3>
+<h3 *ngSwitchCase="'green'" style="background-color: green;">Green Color</h3>
+<h3 *ngSwitchCase="'yellow'" style="background-color: yellow;">Yellow Color</h3>
+<h3 *ngSwitchCase="'blue'" style="background-color: blue;">Blue Color</h3>
+<h3 *ngSwitchCase="'aqua'" style="background-color: aqua;">Aqua Color</h3>
+<h3 *ngSwitchDefault>No Color Selected</h3>
+</div>

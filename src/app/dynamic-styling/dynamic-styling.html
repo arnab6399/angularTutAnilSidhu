@@ -1,0 +1,7 @@
+<p>dynamic-styling works!</p>
+
+<p [style.color]="isRed ? 'red' : 'blue'">This text changes color based on isRed property.</p>
+<h2 [style.background]="isRed ? 'red' : 'green'">This heading changes font weight based on background property.</h2>
+<h1 [style.font-size.px]="isZoomed ? 60 : 15">This heading changes font size based on isZoomed property.</h1>
+<button (click)="isRed=!isRed">Toggle Color</button>
+<button (click)="isZoomed=!isZoomed">Toggle Zoom</button>
