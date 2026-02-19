@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { RulesAndStyles } from "./rules-and-styles/rules-and-styles";
 import { Ifelse } from './ifelse/ifelse';
 import { Elseif } from "./elseif/elseif";
@@ -12,7 +12,7 @@ import { Page1 } from "./page1/page1";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RulesAndStyles, Ifelse, Elseif, SwitchLoopSignal, ContextualVar, TwoWayBindingTodolist, DynamicStyling, DirectiveExample, Page1],
+  imports: [RouterOutlet, RouterLink, RulesAndStyles, Ifelse, Elseif, SwitchLoopSignal, ContextualVar, TwoWayBindingTodolist, DynamicStyling, DirectiveExample, Page1],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
